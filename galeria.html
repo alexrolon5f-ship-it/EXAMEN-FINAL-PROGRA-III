@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html" class="activo">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html" class="activo">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<section class="aparecer">
+  <h2 class="titulo-seccion">Galería</h2>
+  <p class="subtitulo-seccion">Algunos destinos a los que podés viajar con nosotros. Hacé clic en una imagen para verla más grande.</p>
+
+  <!-- galeria-cuadricula: grilla responsive de fotos, se acomodan solas segun el ancho de cada pantalla 
+       cada foto esta en un figure y al hacer click el js abre el modal de mas abajo con la version grande -->
+  <div class="galeria-cuadricula">
+    <figure><img src="IMG/galeria/g1.jpg" alt="Playa tropical con palmeras" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g2.jpg" alt="Avión en pista de aeropuerto" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g3.jpg" alt="Pasaporte con sellos de viaje" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g4.jpg" alt="Vista aérea de ciudad de noche" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g5.jpg" alt="Templo asiático iluminado de noche" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g6.jpg" alt="Paisaje de montañas nevadas" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g7.jpg" alt="Crucero en el mar" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g8.jpg" alt="Mercado de frutas al aire libre" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g9.jpg" alt="Puente colgante sobre el mar" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g10.jpg" alt="Cascada en medio de la selva" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g11.jpg" alt="Ruinas antiguas en la montaña" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g12.jpg" alt="Calle colonial con arco y campanario" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g13.jpg" alt="Globos aerostáticos sobre un valle" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g14.jpg" alt="Dunas de un desierto" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g15.jpg" alt="Canal con edificios coloridos" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g16.jpg" alt="Cebra en la sabana africana" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g17.jpg" alt="Casas blancas frente al mar" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g18.jpg" alt="Tren recorriendo un paisaje de montaña" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g19.jpg" alt="Excursionistas caminando con mochilas" loading="lazy"></figure>
+    <figure><img src="IMG/galeria/g20.jpg" alt="Atardecer sobre el mar" loading="lazy"></figure>
+  </div>
+</section>
+
+<div id="modalGaleria" class="modal">
+  <div class="modal-contenido modal-imagen">
+    <button class="modal-cerrar" data-modal-close>&times;</button>
+    <img id="imgGaleriaGrande" src="" alt="Imagen ampliada" class="imagen-modal">
+  </div>
+</div>
+
+<footer>
+  <div class="footer-cuadricula">
+    <div>
+      <h5>TravelPy</h5>
+      <p class="texto-pie">Agencia de viajes, paquetes turísticos y asesoramiento personalizado.</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p class="texto-pie">Caacupé, Paraguay</p>
+      <p class="texto-pie">+595 973 682 145</p>
+      <p class="texto-pie">info@travelpy.com</p>
+    </div>
+    <div>
+      <h5>Enlaces</h5>
+      <p class="texto-pie"><a href="privacidad.html">Política de Privacidad</a></p>
+      <p class="texto-pie"><a href="desarrolladores.html">Desarrolladores</a></p>
+      <p class="texto-pie"><a href="faq.html">Preguntas Frecuentes</a></p>
+    </div>
+    <div>
+      <h5>Redes</h5>
+      <div class="redes">
+        <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+  <p class="derechos">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+<script src="JS/galeria.js"></script>
+</body>
+</html>

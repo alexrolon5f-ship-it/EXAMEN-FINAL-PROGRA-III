@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html" class="activo">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html" class="activo">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<section class="aparecer">
+  <h2 class="titulo-seccion">Nuestros paquetes</h2>
+  <p class="subtitulo-seccion">Estos son algunos de los destinos y paquetes que ofrecemos.</p>
+
+  <!-- cada tarjeta es un paquete de viaje. la img de arriba, categoria, nombre, precio y el boton "Ver mas".
+       los data-nombre/data-descripcion/data-precio del boton los toma el javascript s para llenar el modal
+       de detalle cuando se hace click, asi no repito ese texto dos veces en el html y no utilizo espaciom de mas-->
+  <div class="cuadricula">
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje1.jpg" alt="Seúl, Corea del Sur">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Seúl, Corea del Sur</h4>
+        <p class="precio">$1690</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Seúl, Corea del Sur"
+          data-descripcion="Recorré templos, mercados y la vida nocturna de la ciudad en un viaje guiado de 8 días."
+          data-precio="$1690 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje2.jpg" alt="Nueva York, Estados Unidos">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Nueva York, Estados Unidos</h4>
+        <p class="precio">$980</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Nueva York, Estados Unidos"
+          data-descripcion="Vuelo, hotel en Manhattan y un tour panorámico para conocer lo mejor de la ciudad en 5 días."
+          data-precio="$980 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje3.jpg" alt="Río de Janeiro, Brasil">
+      <div class="tarjeta-info">
+        <span class="categoria">Playa</span>
+        <h4>Río de Janeiro, Brasil</h4>
+        <p class="precio">$650</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Río de Janeiro, Brasil"
+          data-descripcion="Playa, Cristo Redentor y Pan de Azúcar, con desayuno y traslados durante 6 días."
+          data-precio="$650 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje4.jpg" alt="Barcelona, España">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Barcelona, España</h4>
+        <p class="precio">$1150</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Barcelona, España"
+          data-descripcion="Una semana para conocer la Sagrada Familia, el Barrio Gótico y la costa catalana."
+          data-precio="$1150 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje5.jpg" alt="Cancún, México">
+      <div class="tarjeta-info">
+        <span class="categoria">Playa</span>
+        <h4>Cancún, México</h4>
+        <p class="precio">$760</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Cancún, México"
+          data-descripcion="Hotel familiar con parque acuático para los chicos, 6 días todo incluido."
+          data-precio="$760 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje6.jpg" alt="Roma, Italia">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Roma, Italia</h4>
+        <p class="precio">$1200</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Roma, Italia"
+          data-descripcion="El Coliseo, el Vaticano y los rincones más lindos de la capital italiana en 10 días."
+          data-precio="$1200 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje7.jpg" alt="Buenos Aires, Argentina">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Buenos Aires, Argentina</h4>
+        <p class="precio">$210</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Buenos Aires, Argentina"
+          data-descripcion="Fin de semana largo con hotel céntrico y una city tour a pie por el centro porteño."
+          data-precio="$210 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje8.jpg" alt="Bali, Indonesia">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Bali, Indonesia</h4>
+        <p class="precio">$1350</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Bali, Indonesia"
+          data-descripcion="9 días entre playas, templos y arrozales, con excursiones opcionales."
+          data-precio="$1350 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje9.jpg" alt="París, Francia">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>París, Francia</h4>
+        <p class="precio">$1400</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="París, Francia"
+          data-descripcion="Hotel cerca de la Torre Eiffel y entrada al Museo del Louvre, 7 días de recorrido."
+          data-precio="$1400 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje10.jpg" alt="Cusco, Perú">
+      <div class="tarjeta-info">
+        <span class="categoria">Aventura</span>
+        <h4>Cusco, Perú</h4>
+        <p class="precio">$540</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Cusco, Perú"
+          data-descripcion="Caminata hasta Machu Picchu en 5 días, con guía y equipo de montaña incluidos."
+          data-precio="$540 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje11.jpg" alt="Tokio, Japón">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>Tokio, Japón</h4>
+        <p class="precio">$1890</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Tokio, Japón"
+          data-descripcion="Pase de tren bala incluido para moverte entre Tokio y Kioto durante 10 días."
+          data-precio="$1890 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje12.jpg" alt="Santorini, Grecia">
+      <div class="tarjeta-info">
+        <span class="categoria">Playa</span>
+        <h4>Santorini, Grecia</h4>
+        <p class="precio">$1550</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Santorini, Grecia"
+          data-descripcion="Atardeceres en Oia y hospedaje frente al mar Egeo, paquete de 6 días."
+          data-precio="$1550 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="modalServicio" class="modal">
+  <div class="modal-contenido">
+    <button class="modal-cerrar" data-modal-close>&times;</button>
+    <h3 id="servicioTitulo"></h3>
+    <p id="servicioDescripcion"></p>
+    <p id="servicioPrecio" class="precio"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-cuadricula">
+    <div>
+      <h5>TravelPy</h5>
+      <p class="texto-pie">Agencia de viajes, paquetes turísticos y asesoramiento personalizado.</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p class="texto-pie">Caacupé, Paraguay</p>
+      <p class="texto-pie">+595 973 682 145</p>
+      <p class="texto-pie">info@travelpy.com</p>
+    </div>
+    <div>
+      <h5>Enlaces</h5>
+      <p class="texto-pie"><a href="privacidad.html">Política de Privacidad</a></p>
+      <p class="texto-pie"><a href="desarrolladores.html">Desarrolladores</a></p>
+      <p class="texto-pie"><a href="faq.html">Preguntas Frecuentes</a></p>
+    </div>
+    <div>
+      <h5>Redes</h5>
+      <div class="redes">
+        <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+  <p class="derechos">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+<script src="JS/servicios.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desarrolladores | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<section class="aparecer">
+  <h2 class="titulo-seccion">Desarrolladores</h2>
+  <p class="subtitulo-seccion">Este sitio fue desarrollado para el examen final de Programación III.</p>
+
+  <div class="equipo">
+    <div class="miembro">
+      <img src="IMG/fotoAlex.png" alt="Alex Rolon">
+      <h4>Alex Rolon</h4>
+      <p class="rol">Desarrollador</p>
+      <p>Estudiante de tercer año de Ingeniería Informática. Encargado del diseño y desarrollo completo del sitio.</p>
+      <p><strong>Tecnologías usadas</strong></p>
+      <div class="tecnologias">
+        <span class="badge-tec">HTML5</span>
+        <span class="badge-tec">CSS3</span>
+        <span class="badge-tec">JavaScript</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="derechos sin-borde-arriba">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

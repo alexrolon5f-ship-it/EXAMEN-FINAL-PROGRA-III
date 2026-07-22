@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<section class="aparecer pagina-legal">
+  <h2 class="titulo-seccion">Política de Privacidad</h2>
+
+  <h4>Protección de datos</h4>
+  <p>Los datos personales que nos brindás a través del formulario de contacto (nombre, apellido,
+  correo, teléfono y el mensaje que nos escribas) se utilizan únicamente para responder tu consulta
+  o gestionar tu reserva, y no se comparten con terceros sin tu consentimiento. Tratamos de guardar
+  solamente la información necesaria para poder atenderte, y no la usamos para otro fin que no sea
+  ese. Si en algún momento dejamos de necesitarla, la eliminamos de nuestros registros.</p>
+
+  <h4>Uso del sitio web</h4>
+  <p>Este sitio tiene fines informativos y comerciales, y está destinado
+     a dar a conocer los servicios que ofrece nuestra agencia de viajes.
+      Todo el contenido publicado es de uso exclusivo de TravelPy y
+      no puede ser copiado, distribuido ni reutilizado sin autorización previa.
+      Las imágenes y descripciones de los destinos se muestran a modo ilustrativo, y pueden no
+      coincidir exactamente con las condiciones del lugar en el momento del viaje.</p>
+
+  <h4>Términos y condiciones</h4>
+  <p>Los precios y la disponibilidad de los paquetes pueden cambiar sin previo aviso.
+     La reserva quedará confirmada una vez que se haya recibido el pago correspondiente.
+     En caso de cancelación por parte del cliente, las condiciones de reembolso van a depender
+     del paquete contratado y de los plazos acordados al momento de la reserva. Recomendamos
+     consultar cualquier duda antes de confirmar el pago, ya sea por el formulario de contacto
+     o por los medios que figuran en el pie de página.
+  </p>
+
+  <h4>Derechos del usuario</h4>
+  <p>Podés solicitar en cualquier momento la actualización o eliminación de tus datos personales
+  escribiéndonos a través del formulario de contacto. También podés pedirnos que te confirmemos
+  qué información tenemos guardada sobre vos, y vamos a responderte a la brevedad por el mismo
+  medio de contacto.</p>
+</section>
+
+<footer>
+  <p class="derechos sin-borde-arriba">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+<script src="JS/script.js"></script>
+</body>
+</html>

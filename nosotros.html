@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html" class="activo">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/ o cerrar el menu en celu asi no usamos el js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html" class="activo">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+<!-- Aparece la historia de la empresa y su vision,mision, etc-->
+<section class="aparecer">
+  <h2 class="titulo-seccion">Nuestra historia</h2>
+  <div class="cuadro-destacado">
+    <p class="subtitulo-seccion texto-intro">
+      TravelPy nació con la idea de simplificar la forma de organizar un viaje. Empezamos
+      armando itinerarios para amigos y conocidos, y de a poco fue creciendo
+    hasta convertirse en una agencia que ofrece paquetes a distintos destinos, tanto
+    nacionales como internacionales.
+    </p>
+  </div>
+</section>
+<!--Mision, vision y valores -->
+<section class="fondo-gris aparecer">
+  <div class="valores-grid">
+    <div class="valor">
+      <div class="icono"><img src="IMG/icono-mision.jpg" alt="Mano sosteniendo una brújula"></div>
+      <h4>Misión</h4>
+      <p>Organizar viajes sin complicaciones para nuestros clientes, con atención personalizada en cada paso.</p>
+    </div>
+    <div class="valor">
+      <div class="icono"><img src="IMG/icono-vision.jpg" alt="Persona mirando el horizonte de una ciudad"></div>
+      <h4>Visión</h4>
+      <p>Consolidarnos como una agencia de confianza dentro de la región, conocida por su buen trato y cumplimiento.</p>
+    </div>
+    <div class="valor">
+      <div class="icono"><img src="IMG/icono-valores.jpg" alt="Apretón de manos"></div>
+      <h4>Valores</h4>
+      <p>Honestidad, puntualidad y compromiso con cada cliente que confía en nosotros.</p>
+    </div>
+  </div>
+</section>
+<!--Mi bio aca y mi presentacion, con foto y todo-->
+<section class="aparecer">
+  <h2 class="titulo-seccion">Equipo</h2>
+  <p class="subtitulo-seccion">Las personas detrás de TravelPy.</p>
+  <div class="equipo">
+    <div class="miembro">
+      <img src="IMG/fotoAlex.png" alt="Alex Rolon">
+      <h4>Alex Rolon</h4>
+      <p class="rol">Fundador / Desarrollador</p>
+      <p>Encargado de la organización de los viajes y del desarrollo de este sitio web.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-cuadricula">
+    <div>
+      <h5>TravelPy</h5>
+      <p class="texto-pie">Agencia de viajes, paquetes turísticos y asesoramiento personalizado.</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p class="texto-pie">Caacupé, Paraguay</p>
+      <p class="texto-pie">+595 973 682 145</p>
+      <p class="texto-pie">info@travelpy.com</p>
+    </div>
+    <div>
+      <h5>Enlaces</h5>
+      <p class="texto-pie"><a href="privacidad.html">Política de Privacidad</a></p>
+      <p class="texto-pie"><a href="desarrolladores.html">Desarrolladores</a></p>
+      <p class="texto-pie"><a href="faq.html">Preguntas Frecuentes</a></p>
+    </div>
+    <div>
+      <h5>Redes</h5>
+      <div class="redes">
+        <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+  <p class="derechos">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>

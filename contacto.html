@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="stylesheet" href="CSS/Formstyle.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html" class="activo">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html" class="activo">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<div class="contacto-wrapper">
+
+  <div class="contacto-info">
+    <h2>Contáctanos</h2>
+    <p>Dirección: Caacupé, Paraguay</p>
+    <p>Teléfono: +595 973 682 145</p>
+    <p>Correo: info@travelpy.com</p>
+    <p>Horario: Lunes a viernes de 8:00 a 18:00</p>
+    <iframe
+      src="https://www.google.com/maps?q=Caacup%C3%A9%2C%20Paraguay&output=embed"
+      allowfullscreen loading="lazy">
+    </iframe>
+    <div class="redes redes-separadas">
+      <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+      <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+      <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+    </div>
+  </div>
+
+  <form id="form" class="formulario">
+    <h2>Envianos tu consulta</h2>
+    <p class="subtitulo">Contanos qué necesitás y te respondemos a la brevedad</p>
+
+    <div class="campo">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required>
+    </div>
+
+    <div class="campo">
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" name="apellido" required>
+    </div>
+
+    <div class="campo">
+      <label for="correo">Correo electrónico</label>
+      <input type="email" id="correo" name="correo" required>
+    </div>
+
+    <div class="campo">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="+595 973 682145" required>
+    </div>
+
+    <div class="campo">
+      <label for="asunto">Asunto</label>
+      <input type="text" id="asunto" name="asunto" required>
+    </div>
+
+    <div class="campo">
+      <label for="tipo">Tipo de consulta</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Seleccioná una opción</option>
+        <option value="Reserva">Reserva</option>
+        <option value="Consulta general">Consulta general</option>
+        <option value="Queja">Queja</option>
+        <option value="Sugerencia">Sugerencia</option>
+      </select>
+    </div>
+
+    <div class="campo">
+      <label for="mensaje">Mensaje</label>
+      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+    </div>
+
+    <input type="submit" id="button" value="Enviar mensaje">
+  </form>
+
+</div>
+
+<div id="modalEnviado" class="modal">
+  <div class="modal-contenido">
+    <button class="modal-cerrar" data-modal-close>&times;</button>
+    <h3>Mensaje enviado</h3>
+    <p>Gracias por contactarte con TravelPy. Te vamos a responder a la brevedad.</p>
+  </div>
+</div>
+
+<footer>
+  <p class="derechos sin-borde-arriba">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+  emailjs.init("smvsK5LYjwqCsuTNT");
+</script>
+<script src="JS/script.js"></script>
+<script src="JS/contacto.js"></script>
+</body>
+</html>

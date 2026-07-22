@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelPy | Agencia de Viajes</title>
+  <meta name="description" content="TravelPy, tu agencia de viajes de confianza. Paquetes turísticos, vuelos y experiencias únicas alrededor del mundo.">
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html" class="activo">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html" class="activo">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<!-- Banner principal, rota 4 fotos de fondo con css (sin js) -->
+<section class="portada" id="Inicio">
+  <img src="IMG/banner-playa.jpg" alt="" class="portada-media">
+  <img src="IMG/banner-ciudad.jpg" alt="" class="portada-media">
+  <img src="IMG/banner-montana.jpg" alt="" class="portada-media">
+  <img src="IMG/banner-desierto.jpg" alt="" class="portada-media">
+  <div class="portada-info">
+    <span class="eslogan">Descubrí el mundo con TravelPy</span>
+    <p>Paquetes turísticos, vuelos y experiencias a medida para tu próximo viaje.</p>
+    <a href="servicios.html" class="boton">Ver paquetes</a>
+    <a href="contacto.html" class="boton boton-borde boton-separado">Contáctanos</a>
+  </div>
+  <a href="#Servicios" class="scroll-abajo" aria-label="Bajar a servicios">&darr;</a>
+</section>
+
+<!-- Presentación   del negocio pero breve nomas -->
+<section class="aparecer">
+  <h2 class="titulo-seccion">Quiénes somos</h2>
+  <div class="cuadro-destacado">
+    <p class="subtitulo-seccion">
+      En TravelPy diseñamos paquetes de viaje a medida para cada cliente,
+       combinando destinos increíbles, precios accesibles y atención personalizada en cada etapa del viaje.
+    </p>
+    <a href="nosotros.html" class="boton">Conocé más sobre nosotros</a>
+  </div>
+</section>
+
+<!-- Resumen de servicios/productos -->
+<section class="fondo-gris aparecer" id="Servicios">
+  <h2 class="titulo-seccion">Nuestros servicios</h2>
+  <p class="subtitulo-seccion">Una selección de nuestros paquetes y servicios más populares.</p>
+
+  <div class="cuadricula">
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje5.jpg" alt="Cancún, México">
+      <div class="tarjeta-info">
+        <span class="categoria">Playa</span>
+        <h4>Cancún, México</h4>
+        <p class="precio">Desde $760</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Cancún, México"
+          data-descripcion="Hotel familiar con parque acuático para los chicos, 6 días todo incluido."
+          data-precio="$760 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje10.jpg" alt="Cusco, Perú">
+      <div class="tarjeta-info">
+        <span class="categoria">Aventura</span>
+        <h4>Cusco, Perú</h4>
+        <p class="precio">Desde $540</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="Cusco, Perú"
+          data-descripcion="Caminata hasta Machu Picchu en 5 días, con guía y equipo de montaña incluidos."
+          data-precio="$540 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/viaje9.jpg" alt="París, Francia">
+      <div class="tarjeta-info">
+        <span class="categoria">Ciudad</span>
+        <h4>París, Francia</h4>
+        <p class="precio">Desde $1400</p>
+        <button class="boton-tarjeta ver-mas"
+          data-nombre="París, Francia"
+          data-descripcion="Hotel cerca de la Torre Eiffel y entrada al Museo del Louvre, 7 días de recorrido."
+          data-precio="$1400 por persona">
+          Ver más
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="centrado espacio-arriba">
+    <a href="servicios.html" class="boton">Ver todos los servicios</a>
+  </div>
+</section>
+
+<div id="modalServicio" class="modal">
+  <div class="modal-contenido">
+    <button class="modal-cerrar" data-modal-close>&times;</button>
+    <h3 id="servicioTitulo"></h3>
+    <p id="servicioDescripcion"></p>
+    <p id="servicioPrecio" class="precio"></p>
+  </div>
+</div>
+
+<!-- Beneficios o   ventajas -->
+<section class="aparecer">
+  <h2 class="titulo-seccion">¿Por qué elegirnos?</h2>
+  <div class="beneficios">
+    <div class="beneficio">
+      <div class="icono"><img src="IMG/icono-destinos.jpg" alt="Mapa del mundo"></div>
+      <h4>Destinos variados</h4>
+      <p>Más de 50 destinos alrededor del mundo.</p>
+    </div>
+    <div class="beneficio">
+      <div class="icono"><img src="IMG/icono-precios.jpg" alt="Alcancía con monedas"></div>
+      <h4>Mejores precios</h4>
+      <p>Paquetes accesibles con financiación disponible.</p>
+    </div>
+    <div class="beneficio">
+      <div class="icono"><img src="IMG/icono-atencion.jpg" alt="Agente atendiendo a un cliente"></div>
+      <h4>Atención personalizada</h4>
+      <p>Asesoramiento antes, durante y después del viaje.</p>
+    </div>
+    <div class="beneficio">
+      <div class="icono"><img src="IMG/icono-seguridad.jpg" alt="Candado sobre un teclado"></div>
+      <h4>Compra segura</h4>
+      <p>Reservas protegidas y soporte 24/7.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Cifras, los numeros suben animados con js cuando entran en pantalla -->
+<section class="fondo-gris aparecer">
+  <div class="cifras">
+    <div class="cifra">
+      <span><span class="numero" data-hasta="50">0</span>+</span>
+      <p>Destinos</p>
+    </div>
+    <div class="cifra">
+      <span class="numero" data-hasta="12">0</span>
+      <p>Paquetes armados</p>
+    </div>
+    <div class="cifra">
+      <span><span class="numero" data-hasta="300">0</span>+</span>
+      <p>Viajeros felices</p>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios -->
+<section class="aparecer">
+  <h2 class="titulo-seccion">Lo que dicen nuestros clientes</h2>
+  <div class="testimonios">
+    <div class="testimonio">
+      <p>"Viajamos a Cancún con los chicos y el hotel era justo el que nos mostraron, sin sorpresas."</p>
+      <p class="autor">— Marta G.</p>
+    </div>
+    <div class="testimonio">
+      <p>"Hice la caminata a Machu Picchu con el paquete de Cusco, el guía Wilson nos acompañó todo el recorrido."</p>
+      <p class="autor">— Diego R.</p>
+    </div>
+    <div class="testimonio">
+      <p>"Nos armaron un itinerario para Europa a medida, cambiando fechas dos veces sin cobrarnos nada extra."</p>
+      <p class="autor">— Lucía F.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-cuadricula">
+    <div>
+      <h5>TravelPy</h5>
+      <p class="texto-pie">Tu agencia de confianza para vivir experiencias únicas alrededor del mundo.</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p class="texto-pie">Caacupé, Paraguay</p>
+      <p class="texto-pie">+595 973 682 145</p>
+      <p class="texto-pie">info@travelpy.com</p>
+    </div>
+    <div>
+      <h5>Enlaces</h5>
+      <p class="texto-pie"><a href="privacidad.html">Política de Privacidad</a></p>
+      <p class="texto-pie"><a href="desarrolladores.html">Desarrolladores</a></p>
+      <p class="texto-pie"><a href="faq.html">Preguntas Frecuentes</a></p>
+    </div>
+    <div>
+      <h5>Seguinos</h5>
+      <div class="redes">
+        <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+  <p class="derechos">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+<script src="JS/servicios.js"></script>
+</body>
+</html>

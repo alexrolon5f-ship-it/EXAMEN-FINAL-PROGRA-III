@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html" class="activo">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html" class="activo">Blog</a>
+    <a href="faq.html">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<section class="aparecer">
+  <h2 class="titulo-seccion">Noticias</h2>
+  <p class="subtitulo-seccion">Novedades, promociones y consejos para viajar.</p>
+
+  <div class="cuadricula">
+
+    <div class="tarjeta">
+      <img src="IMG/blog1.jpg" alt="Playa al atardecer">
+      <div class="tarjeta-info">
+        <span class="categoria">3 nov 2025</span>
+        <h4>Nuevos paquetes a la costa para esta temporada</h4>
+        <p>Sumamos tres nuevos destinos de playa con descuento por reserva anticipada.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="3 nov 2025"
+          data-titulo="Nuevos paquetes a la costa para esta temporada"
+          data-contenido="Sumamos tres nuevos destinos de playa con descuento por reserva anticipada. Los paquetes incluyen alojamiento frente al mar y traslados, y ya están disponibles para reservar en la sección de Servicios.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/blog2.jpg" alt="Valija abierta con ropa para armar el equipaje">
+      <div class="tarjeta-info">
+        <span class="categoria">19 ene 2026</span>
+        <h4>Cómo armar el equipaje para un viaje largo</h4>
+        <p>Algunos consejos prácticos para no olvidarte nada en tu próximo viaje.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="19 ene 2026"
+          data-titulo="Cómo armar el equipaje para un viaje largo"
+          data-contenido="Algunos consejos prácticos para no olvidarte nada en tu próximo viaje: hacé una lista por categorías, dejá espacio libre en la valija para las compras y llevá siempre documentación impresa además de la digital.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/blog3.jpg" alt="Torre Eiffel en una calle de París">
+      <div class="tarjeta-info">
+        <span class="categoria">27 feb 2026</span>
+        <h4>Promoción especial para el paquete a Europa</h4>
+        <p>Hasta fin de mes tenés cuotas sin interés en el paquete Europa Clásica.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="27 feb 2026"
+          data-titulo="Promoción especial para el paquete a Europa"
+          data-contenido="Hasta fin de mes tenés cuotas sin interés en el paquete Europa Clásica (Madrid, París y Roma). Consultá disponibilidad de fechas escribiéndonos por el formulario de contacto.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/blog4.jpg" alt="Personas sosteniendo pasaportes en la calle">
+      <div class="tarjeta-info">
+        <span class="categoria">14 may 2026</span>
+        <h4>Documentación necesaria para viajar</h4>
+        <p>Repasamos los requisitos actualizados para los destinos más consultados.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="14 may 2026"
+          data-titulo="Documentación necesaria para viajar"
+          data-contenido="Repasamos los requisitos actualizados para los destinos más consultados: pasaporte vigente con al menos 6 meses de validez, y para algunos países se pide además seguro de viaje. Te asesoramos según el destino elegido.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/blog5.jpg" alt="Piscina de hotel rodeada de palmeras">
+      <div class="tarjeta-info">
+        <span class="categoria">8 jun 2026</span>
+        <h4>Nueva alianza con hoteles en Cancún</h4>
+        <p>Firmamos un acuerdo que nos permite ofrecer mejores tarifas en la zona.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="8 jun 2026"
+          data-titulo="Nueva alianza con hoteles en Cancún"
+          data-contenido="Firmamos un acuerdo que nos permite ofrecer mejores tarifas en la zona de Cancún, con habitaciones familiares y acceso a parque acuático incluido en varios paquetes.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/blog6.jpg" alt="Persona con mochila caminando por un valle">
+      <div class="tarjeta-info">
+        <span class="categoria">1 jul 2026</span>
+        <h4>Consejos para viajar con presupuesto ajustado</h4>
+        <p>Ideas para conocer nuevos destinos sin gastar de más.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="1 jul 2026"
+          data-titulo="Consejos para viajar con presupuesto ajustado"
+          data-contenido="Ideas para conocer nuevos destinos sin gastar de más: viajar en temporada baja, reservar con anticipación y aprovechar los paquetes con cuotas que publicamos en la sección de Servicios.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/g13.jpg" alt="Globos aerostáticos sobre un valle">
+      <div class="tarjeta-info">
+        <span class="categoria">15 ago 2025</span>
+        <h4>Se viene la temporada de paseos en globo en Capadocia</h4>
+        <p>Sumamos una excursión en globo aerostático como opción adicional en varios paquetes.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="15 ago 2025"
+          data-titulo="Se viene la temporada de paseos en globo en Capadocia"
+          data-contenido="Sumamos una excursión en globo aerostático como opción adicional en los paquetes que incluyen Turquía. Se recomienda reservarla con anticipación porque los cupos son limitados por día.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/g11.jpg" alt="Ruinas de Machu Picchu en la montaña">
+      <div class="tarjeta-info">
+        <span class="categoria">22 dic 2025</span>
+        <h4>La experiencia de nuestros clientes en Machu Picchu</h4>
+        <p>Compartimos algunas fotos y comentarios de quienes hicieron la caminata este año.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="22 dic 2025"
+          data-titulo="La experiencia de nuestros clientes en Machu Picchu"
+          data-contenido="Compartimos algunas fotos y comentarios de quienes hicieron la caminata a Machu Picchu este año con nosotros. Un grupo que viajó en octubre nos escribió para agradecer al guía, Wilson, que los acompañó los 4 días completos.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+    <div class="tarjeta">
+      <img src="IMG/galeria/g14.jpg" alt="Dunas de un desierto">
+      <div class="tarjeta-info">
+        <span class="categoria">15 jul 2026</span>
+        <h4>Nuevo paquete a Marruecos con travesía por el desierto</h4>
+        <p>Sumamos una excursión de una noche en el desierto como parte del recorrido.</p>
+        <button class="boton-tarjeta leer-mas"
+          data-fecha="15 jul 2026"
+          data-titulo="Nuevo paquete a Marruecos con travesía por el desierto"
+          data-contenido="Sumamos una excursión de una noche en el desierto como parte del recorrido por Marruecos, con traslado en 4x4, cena y alojamiento en jaimas. Ya está disponible para reservar dentro del paquete Marruecos Clásico.">
+          Leer más
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div id="modalNoticia" class="modal">
+  <div class="modal-contenido modal-noticia">
+    <button class="modal-cerrar" data-modal-close>&times;</button>
+    <span id="noticiaFecha" class="categoria"></span>
+    <h3 id="noticiaTitulo" class="texto-izquierda"></h3>
+    <p id="noticiaContenido"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-cuadricula">
+    <div>
+      <h5>TravelPy</h5>
+      <p class="texto-pie">Agencia de viajes, paquetes turísticos y asesoramiento personalizado.</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p class="texto-pie">Caacupé, Paraguay</p>
+      <p class="texto-pie">+595 973 682 145</p>
+      <p class="texto-pie">info@travelpy.com</p>
+    </div>
+    <div>
+      <h5>Enlaces</h5>
+      <p class="texto-pie"><a href="privacidad.html">Política de Privacidad</a></p>
+      <p class="texto-pie"><a href="desarrolladores.html">Desarrolladores</a></p>
+      <p class="texto-pie"><a href="faq.html">Preguntas Frecuentes</a></p>
+    </div>
+    <div>
+      <h5>Redes</h5>
+      <div class="redes">
+        <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+  <p class="derechos">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+<script src="JS/blog.js"></script>
+</body>
+</html>

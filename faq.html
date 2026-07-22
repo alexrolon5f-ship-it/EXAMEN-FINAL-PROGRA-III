@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes | TravelPy</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">TravelPy</a>
+
+  <nav class="menu-pc">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html" class="activo">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <!-- checkbox oculto para abrir/cerrar el menu en celu, sin usar js -->
+  <input type="checkbox" id="menu-boton">
+  <label class="menu-boton" for="menu-boton">
+    <span></span><span></span><span></span>
+  </label>
+  <nav class="menu-lateral">
+    <label for="menu-boton" class="cerrar-menu">✖</label>
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Nosotros</a>
+    <a href="servicios.html">Servicios</a>
+    <a href="galeria.html">Galería</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html" class="activo">Preguntas</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <button class="temas" onclick="cambiarmodo()" aria-label="Cambiar modo claro/oscuro"></button>
+</header>
+
+<section class="aparecer">
+  <h2 class="titulo-seccion">Preguntas frecuentes</h2>
+  <p class="subtitulo-seccion">Las dudas más comunes de nuestros clientes.</p>
+
+  <div class="pagina-legal">
+
+    <!-- cada pregunta es un accordion-item con su boton y su respuesta
+         el js le agrega la clase "activo" al hacer click, y el css se VA A encargaR
+         de mostrar o ocultar la respuesta con una transicion de max-height -->
+    <div class="accordion-item">
+      <button class="accordion-header">¿Cómo puedo reservar un paquete?</button>
+      <div class="accordion-body"><p>Podés reservar completando el formulario de contacto o escribiéndonos directamente por WhatsApp o correo.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Qué formas de pago aceptan?</button>
+      <div class="accordion-body"><p>Aceptamos tarjeta de crédito, débito y transferencia bancaria. Algunos paquetes admiten cuotas.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Puedo cancelar mi reserva?</button>
+      <div class="accordion-body"><p>Sí, según el paquete y la fecha de cancelación puede aplicarse un cargo administrativo. Te lo detallamos antes de confirmar la reserva.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Los paquetes incluyen seguro de viaje?</button>
+      <div class="accordion-body"><p>Algunos paquetes lo incluyen. En los que no, podemos agregarlo como servicio adicional.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Necesito visa para los destinos que ofrecen?</button>
+      <div class="accordion-body"><p>Depende del destino y tu nacionalidad. Te asesoramos sobre los requisitos antes de confirmar el viaje.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Puedo personalizar un paquete?</button>
+      <div class="accordion-body"><p>Sí, armamos itinerarios a medida según tus fechas, presupuesto y preferencias.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Con cuánta anticipación debo reservar?</button>
+      <div class="accordion-body"><p>Recomendamos al menos 30 días antes, aunque para temporada alta conviene reservar con más tiempo.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Trabajan con menores de edad viajando solos?</button>
+      <div class="accordion-body"><p>Sí, gestionamos la documentación necesaria para menores que viajan sin uno de los padres o solos.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Qué pasa si mi vuelo se cancela o se retrasa?</button>
+      <div class="accordion-body"><p>Nuestro equipo de soporte te acompaña para reprogramar el itinerario según corresponda.</p></div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-header">¿Cómo los contacto durante el viaje si tengo un problema?</button>
+      <div class="accordion-body"><p>Contás con una línea de contacto directa disponible durante todo el viaje.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-cuadricula">
+    <div>
+      <h5>TravelPy</h5>
+      <p class="texto-pie">Agencia de viajes, paquetes turísticos y asesoramiento personalizado.</p>
+    </div>
+    <div>
+      <h5>Contacto</h5>
+      <p class="texto-pie">Caacupé, Paraguay</p>
+      <p class="texto-pie">+595 973 682 145</p>
+      <p class="texto-pie">info@travelpy.com</p>
+    </div>
+    <div>
+      <h5>Enlaces</h5>
+      <p class="texto-pie"><a href="privacidad.html">Política de Privacidad</a></p>
+      <p class="texto-pie"><a href="desarrolladores.html">Desarrolladores</a></p>
+      <p class="texto-pie"><a href="faq.html">Preguntas Frecuentes</a></p>
+    </div>
+    <div>
+      <h5>Redes</h5>
+      <div class="redes">
+        <a href="https://instagram.com/travelpy" aria-label="Instagram"><img src="IMG/logo-instagram.png" alt="Instagram"></a>
+        <a href="https://facebook.com/travelpy" aria-label="Facebook"><img src="IMG/logo-facebook.png" alt="Facebook"></a>
+        <a href="https://x.com/travelpy" aria-label="X"><img src="IMG/logo-x.png" alt="X"></a>
+      </div>
+    </div>
+  </div>
+  <p class="derechos">© 2026 TravelPy. Todos los derechos reservados.</p>
+</footer>
+
+<script src="JS/script.js"></script>
+</body>
+</html>
